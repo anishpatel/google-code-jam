@@ -10,13 +10,13 @@ import java.util.Scanner;
 public class A
 {
 	static String FILE_NAME = "A-sample";
-//	static String FILE_NAME = "A-small-attempt0";
-//	static String FILE_NAME = "A-large";
+//	static String FILE_NAME = "A-small-practice";
+//	static String FILE_NAME = "A-large-practice";
 
 	// helper function
-	static int scalarProd(List<Integer> v1, List<Integer> v2)
+	static long scalarProd(List<Long> v1, List<Long> v2)
 	{
-		int sum = 0;
+		long sum = 0;
 		for (int i = 0; i < v1.size(); i++) {
 			sum += v1.get(i) * v2.get(i);
 		}
@@ -24,7 +24,7 @@ public class A
 	}
 	
 	// main processing function - takes structured case input and returns structured output
-	static int minScalarProd(List<Integer> v1, List<Integer> v2)
+	static long minScalarProd(List<Long> v1, List<Long> v2)
 	{
 		Collections.sort(v1);
 		Collections.sort(v2);
@@ -46,18 +46,18 @@ public class A
 				// get input
 				int len = sc.nextInt();
 				
-				List<Integer> v1 = new ArrayList<Integer>(len);
+				List<Long> v1 = new ArrayList<Long>(len);
 				for (int i = 0; i < len; i++) {
-					v1.add(sc.nextInt());
+					v1.add(sc.nextLong());
 				}
 				
-				List<Integer> v2 = new ArrayList<Integer>(len);
+				List<Long> v2 = new ArrayList<Long>(len);
 				for (int i = 0; i < len; i++) {
-					v2.add(sc.nextInt());
+					v2.add(sc.nextLong());
 				}
 				
 				// process
-				int result = minScalarProd(v1, v2);
+				long result = minScalarProd(v1, v2);
 				
 				// output
 				pw.printf("Case #%d: %d\n", c, result);
