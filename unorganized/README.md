@@ -1,0 +1,1 @@
+**NOTE: It looks like some of these files are not my programs, but solutions from the Google Code Jam website that I accidentally committed. This is why this code is in a directory labeled `unorganized`.**
